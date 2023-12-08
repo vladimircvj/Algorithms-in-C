@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <math.h>
-/* Unesi n, a zatim n cijelih brojeva koji su poredani od manjeg prema veæem. Zatim unesi m pa m cijelih brojeva, za svakog od njih ispiši na kojem se mjestu 
-nalazi u nizu (0-indeksirano), ako ga nema napiši "ne" */
+/* Enter n (1 <= n <= 10000), then an array of n integers sorted from smallest to largest. Then enter m (1 <= m <= 100000), followed by m integers. 
+For each of the entered m numbers, print the position in the array (0-indexed) or "ne" (no) if it is not present. Use binary search for array search. */
+/*Instead of searching an array element by element binary search looks for the value in the middle of an array and decides if the left or right half of the array is 
+appropriate. In each iteration it redues size of the array by half. This approach results in O(n logn) time complexity. It is important to note that binary search
+works only on pre-sorted arrays.*/
 
 int n;
 int P[10000];
